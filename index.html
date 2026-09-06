@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiFiSense | Wireless Coverage Intelligence</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===================== BACKGROUND ===================== -->
+    <div class="background-grid"></div>
+    <div class="ambient ambient-1"></div>
+    <div class="ambient ambient-2"></div>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <header class="navbar">
+        <div class="brand">
+            <div class="brand-icon">
+                <span>⌁</span>
+            </div>
+
+            <div>
+                <div class="brand-name">WiFi<span>Sense</span></div>
+                <div class="brand-subtitle">WIRELESS INTELLIGENCE</div>
+            </div>
+        </div>
+
+        <nav>
+            <button class="nav-btn active" data-page="dashboard">Dashboard</button>
+            <button class="nav-btn" data-page="simulator">Simulator</button>
+            <button class="nav-btn" data-page="analytics">Analytics</button>
+            <button class="nav-btn" data-page="optimization">Optimization</button>
+        </nav>
+
+        <div class="system-status">
+            <span class="status-dot"></span>
+            SYSTEM READY
+        </div>
+    </header>
+
+
+    <!-- ===================== MAIN ===================== -->
+    <main>
+
+        <!-- ===================== DASHBOARD ===================== -->
+        <section id="dashboard" class="page active-page">
+
+            <div class="hero">
+
+                <div class="hero-content">
+
+                    <div class="eyebrow">
+                        <span></span>
+                        INTELLIGENT WI-FI PLANNING PLATFORM
+                    </div>
+
+                    <h1>
+                        See Your Signal.
+                        <br>
+                        <span>Eliminate Dead Zones.</span>
+                    </h1>
+
+                    <p>
+                        Simulate wireless propagation, analyze indoor Wi-Fi
+                        coverage, detect dead zones and optimize access-point
+                        placement before deployment.
+                    </p>
+
+                    <div class="hero-actions">
+                        <button class="primary-btn" id="launchSimulator">
+                            Launch Simulator
+                            <span>→</span>
+                        </button>
+
+                        <button class="secondary-btn" id="demoMode">
+                            ▶ Run Demo
+                        </button>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div>
+                            <strong>6+</strong>
+                            <small>ANALYSIS PARAMETERS</small>
+                        </div>
+
+                        <div>
+                            <strong>5</strong>
+                            <small>WIRELESS MODELS</small>
+                        </div>
+
+                        <div>
+                            <strong>∞</strong>
+                            <small>SIMULATION SCENARIOS</small>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- HERO NETWORK VISUAL -->
+                <div class="hero-network">
+
+                    <div class="network-ring ring-1"></div>
+                    <div class="network-ring ring-2"></div>
+                    <div class="network-ring ring-3"></div>
+
+                    <div class="hero-router">
+                        <div class="router-glow"></div>
+                        <div class="router-symbol">📡</div>
+                    </div>
+
+                    <div class="signal-particle p1"></div>
+                    <div class="signal-particle p2"></div>
+                    <div class="signal-particle p3"></div>
+
+                    <div class="device device-1">📱</div>
+                    <div class="device device-2">💻</div>
+                    <div class="device device-3">📺</div>
+
+                    <div class="network-line line-1"></div>
+                    <div class="network-line line-2"></div>
+                    <div class="network-line line-3"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FEATURE CARDS -->
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">CAPABILITIES</span>
+                    <h2>Wireless intelligence, visualized.</h2>
+                </div>
+            </div>
+
+            <div class="feature-grid">
+
+                <article class="feature-card">
+                    <div class="feature-icon">🌈</div>
+                    <h3>Signal Heatmap</h3>
+                    <p>
+                        Visualize estimated RSSI across an indoor environment
+                        and instantly identify weak-signal regions.
+                    </p>
+                    <span>RSSI ANALYSIS</span>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon">🧱</div>
+                    <h3>Obstacle Modeling</h3>
+                    <p>
+                        Model walls and physical obstacles that introduce
+                        attenuation and reduce received signal strength.
+                    </p>
+                    <span>PATH LOSS</span>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Interference Analysis</h3>
+                    <p>
+                        Study the impact of noise and neighboring networks on
+                        signal quality and SNR.
+                    </p>
+                    <span>SNR / NOISE</span>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>Placement Optimization</h3>
+                    <p>
+                        Automatically search possible positions and recommend
+                        an access-point configuration.
+                    </p>
+                    <span>OPTIMIZATION</span>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ===================== SIMULATOR ===================== -->
+        <section id="simulator" class="page">
+
+            <div class="page-header">
+                <div>
+                    <span class="section-label">SIMULATION ENGINE</span>
+                    <h2>Wireless Coverage Simulator</h2>
+                    <p>
+                        Configure the environment and analyze how wireless
+                        conditions affect signal quality.
+                    </p>
+                </div>
+
+                <button class="primary-btn small" id="runAnalysis">
+                    ▶ Analyze Network
+                </button>
+            </div>
+
+
+            <div class="simulator-layout">
+
+                <!-- CONTROLS -->
+                <aside class="control-panel">
+
+                    <div class="panel-title">
+                        <span>⚙</span>
+                        Network Configuration
+                    </div>
+
+
+                    <div class="control-group">
+
+                        <label>Frequency Band</label>
+
+                        <div class="segmented">
+                            <button class="freq-btn active" data-frequency="2.4">
+                                2.4 GHz
+                            </button>
+
+                            <button class="freq-btn" data-frequency="5">
+                                5 GHz
+                            </button>
+                        </div>
+
+                    </div>
+
+
+                    <div class="control-group">
+
+                        <label>
+                            Transmit Power
+                            <strong id="powerValue">20 dBm</strong>
+                        </label>
+
+                        <input
+                            type="range"
+                            id="power"
+                            min="10"
+                            max="30"
+                            value="20"
+                        >
+
+                    </div>
+
+
+                    <div class="control-group">
+
+                        <label>
+                            Environment
+                        </label>
+
+                        <select id="environment">
+
+                            <option value="home">Residential / Home</option>
+                            <option value="office">Office</option>
+                            <option value="college">College</option>
+                            <option value="hotel">Hotel</option>
+                            <option value="warehouse">Warehouse</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="control-group">
+
+                        <label>
+                            Noise Level
+                            <strong id="noiseValue">-90 dBm</strong>
+                        </label>
+
+                        <input
+                            type="range"
+                            id="noise"
+                            min="-100"
+                            max="-60"
+                            value="-90"
+                        >
+
+                    </div>
+
+
+                    <div class="control-group">
+
+                        <label>
+                            Nearby Wi-Fi Networks
+                            <strong id="interferenceValue">2</strong>
+                        </label>
+
+                        <input
+                            type="range"
+                            id="interference"
+                            min="0"
+                            max="8"
+                            value="2"
+                        >
+
+                    </div>
+
+
+                    <div class="control-group">
+
+                        <label>Path Loss Model</label>
+
+                        <select id="pathModel">
+
+                            <option value="log">Log-Distance Indoor</option>
+                            <option value="free">Free Space</option>
+                            <option value="indoor">Indoor Simplified</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="control-group">
+
+                        <label>Access Points</label>
+
+                        <div class="ap-selector">
+
+                            <button class="ap-btn active" data-ap="1">1</button>
+                            <button class="ap-btn" data-ap="2">2</button>
+                            <button class="ap-btn" data-ap="3">3</button>
+
+                        </div>
+
+                    </div>
+
+
+                    <button class="secondary-btn full" id="resetSimulation">
+                        Reset Simulation
+                    </button>
+
+                </aside>
+
+
+                <!-- FLOOR PLAN -->
+                <div class="simulation-card">
+
+                    <div class="simulation-toolbar">
+
+                        <div>
+                            <strong id="scenarioName">Home Coverage</strong>
+                            <span>Live propagation model</span>
+                        </div>
+
+                        <div class="legend">
+
+                            <span><i class="excellent"></i>Excellent</span>
+                            <span><i class="good"></i>Good</span>
+                            <span><i class="fair"></i>Fair</span>
+                            <span><i class="weak"></i>Weak</span>
+                            <span><i class="dead"></i>Dead</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="floor-wrapper">
+
+                        <canvas id="heatmapCanvas"></canvas>
+
+                        <div class="floor-plan" id="floorPlan">
+
+                            <div class="room room-a">
+                                <span>Living Room</span>
+                            </div>
+
+                            <div class="room room-b">
+                                <span>Bedroom</span>
+                            </div>
+
+                            <div class="room room-c">
+                                <span>Kitchen</span>
+                            </div>
+
+                            <div class="room room-d">
+                                <span>Office</span>
+                            </div>
+
+
+                            <div class="wall wall-1"></div>
+                            <div class="wall wall-2"></div>
+                            <div class="wall wall-3"></div>
+
+
+                            <div
+                                class="router-marker"
+                                id="routerMarker"
+                                draggable="true"
+                                title="Drag router"
+                            >
+                                <div class="router-pulse"></div>
+                                <span>📡</span>
+                            </div>
+
+
+                            <div class="device-marker device-phone" title="Smartphone">
+                                📱
+                            </div>
+
+                            <div class="device-marker device-laptop" title="Laptop">
+                                💻
+                            </div>
+
+                            <div class="device-marker device-tv" title="Smart TV">
+                                📺
+                            </div>
+
+
+                            <div class="measurement-point point-1"></div>
+                            <div class="measurement-point point-2"></div>
+                            <div class="measurement-point point-3"></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="simulation-footer">
+
+                        <div class="metric">
+                            <span>Coverage</span>
+                            <strong id="coverageMetric">--%</strong>
+                        </div>
+
+                        <div class="metric">
+                            <span>Dead Zone</span>
+                            <strong id="deadMetric">--%</strong>
+                        </div>
+
+                        <div class="metric">
+                            <span>Average RSSI</span>
+                            <strong id="rssiMetric">-- dBm</strong>
+                        </div>
+
+                        <div class="metric">
+                            <span>Average SNR</span>
+                            <strong id="snrMetric">-- dB</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ===================== ANALYTICS ===================== -->
+        <section id="analytics" class="page">
+
+            <div class="page-header">
+
+                <div>
+                    <span class="section-label">NETWORK INTELLIGENCE</span>
+                    <h2>Coverage Analytics</h2>
+                    <p>
+                        Quantitative analysis of the current wireless environment.
+                    </p>
+                </div>
+
+                <div class="analysis-status">
+                    <span class="status-dot"></span>
+                    Analysis Ready
+                </div>
+
+            </div>
+
+
+            <div class="analytics-grid">
+
+                <div class="analytics-card large">
+
+                    <div class="card-heading">
+                        <div>
+                            <span>RSSI DISTRIBUTION</span>
+                            <h3>Signal Quality</h3>
+                        </div>
+
+                        <strong id="analyticsRSSI">-- dBm</strong>
+                    </div>
+
+                    <div class="bar-chart" id="signalChart">
+
+                        <div class="chart-bar">
+                            <span>-30</span>
+                            <div style="height: 90%"></div>
+                            <small>Excellent</small>
+                        </div>
+
+                        <div class="chart-bar">
+                            <span>-50</span>
+                            <div style="height: 75%"></div>
+                            <small>Good</small>
+                        </div>
+
+                        <div class="chart-bar">
+                            <span>-60</span>
+                            <div style="height: 55%"></div>
+                            <small>Fair</small>
+                        </div>
+
+                        <div class="chart-bar">
+                            <span>-70</span>
+                            <div style="height: 35%"></div>
+                            <small>Weak</small>
+                        </div>
+
+                        <div class="chart-bar">
+                            <span>-80</span>
+                            <div style="height: 18%"></div>
+                            <small>Dead</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="analytics-card">
+
+                    <span>NETWORK QUALITY</span>
+
+                    <div class="quality-score">
+                        <div class="score-circle">
+                            <strong id="qualityScore">--</strong>
+                            <small>/100</small>
+                        </div>
+                    </div>
+
+                    <div class="quality-label" id="qualityLabel">
+                        Waiting for analysis
+                    </div>
+
+                </div>
+
+
+                <div class="analytics-card">
+
+                    <span>INTERFERENCE</span>
+
+                    <div class="big-value" id="analyticsInterference">
+                        LOW
+                    </div>
+
+                    <div class="progress">
+                        <div id="interferenceBar"></div>
+                    </div>
+
+                    <small>
+                        Based on neighboring networks and configured noise.
+                    </small>
+
+                </div>
+
+
+                <div class="analytics-card large">
+
+                    <span>COVERAGE BREAKDOWN</span>
+
+                    <div class="coverage-bars">
+
+                        <div>
+                            <label>Excellent <b id="excellentPct">--%</b></label>
+                            <div class="progress">
+                                <div class="excellent-progress" id="excellentBar"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label>Good <b id="goodPct">--%</b></label>
+                            <div class="progress">
+                                <div class="good-progress" id="goodBar"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label>Fair <b id="fairPct">--%</b></label>
+                            <div class="progress">
+                                <div class="fair-progress" id="fairBar"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label>Weak <b id="weakPct">--%</b></label>
+                            <div class="progress">
+                                <div class="weak-progress" id="weakBar"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label>Dead Zone <b id="deadPct">--%</b></label>
+                            <div class="progress">
+                                <div class="dead-progress" id="deadBar"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ===================== OPTIMIZATION ===================== -->
+        <section id="optimization" class="page">
+
+            <div class="page-header">
+
+                <div>
+                    <span class="section-label">INTELLIGENT OPTIMIZATION</span>
+                    <h2>Access Point Optimizer</h2>
+                    <p>
+                        Search the simulated environment for a configuration
+                        that improves coverage and reduces dead zones.
+                    </p>
+                </div>
+
+                <button class="primary-btn" id="optimizeBtn">
+                    🤖 Find Best Placement
+                </button>
+
+            </div>
+
+
+            <div class="optimization-layout">
+
+                <div class="optimization-visual">
+
+                    <div class="optimization-grid"></div>
+
+                    <div class="optimization-router" id="optimizationRouter">
+                        📡
+                    </div>
+
+                    <div class="scan-ring"></div>
+
+                    <div class="scan-text">
+                        <span id="scanStatus">READY TO OPTIMIZE</span>
+                    </div>
+
+                </div>
+
+
+                <div class="recommendation-card">
+
+                    <div class="recommendation-icon">🏆</div>
+
+                    <span>RECOMMENDED CONFIGURATION</span>
+
+                    <h3 id="recommendationTitle">
+                        Run Optimization
+                    </h3>
+
+                    <p id="recommendationText">
+                        The optimizer will evaluate candidate access-point
+                        positions and calculate expected coverage.
+                    </p>
+
+
+                    <div class="recommendation-metrics">
+
+                        <div>
+                            <small>Coverage</small>
+                            <strong id="optimizedCoverage">--%</strong>
+                        </div>
+
+                        <div>
+                            <small>Dead Zone</small>
+                            <strong id="optimizedDead">--%</strong>
+                        </div>
+
+                        <div>
+                            <small>Avg. RSSI</small>
+                            <strong id="optimizedRSSI">-- dBm</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="recommendation-list">
+
+                        <div>
+                            <span>✓</span>
+                            Centralized coverage
+                        </div>
+
+                        <div>
+                            <span>✓</span>
+                            Reduced weak-signal regions
+                        </div>
+
+                        <div>
+                            <span>✓</span>
+                            Improved network quality
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="report-card">
+
+                <div>
+                    <span class="section-label">DEPLOYMENT REPORT</span>
+                    <h3>WiFiSense Recommendation</h3>
+                </div>
+
+                <button class="secondary-btn" id="generateReport">
+                    Generate Report
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ===================== TOAST ===================== -->
+    <div class="toast" id="toast">
+        <span>✓</span>
+        <div>
+            <strong id="toastTitle">Success</strong>
+            <small id="toastMessage">Operation completed.</small>
+        </div>
+    </div>
+
+
+    <!-- ===================== MODAL ===================== -->
+    <div class="modal-overlay" id="reportModal">
+
+        <div class="report-modal">
+
+            <button class="modal-close" id="closeModal">×</button>
+
+            <div class="report-header">
+                <div class="brand-icon">⌁</div>
+
+                <div>
+                    <h2>WiFiSense</h2>
+                    <span>Wireless Coverage Analysis Report</span>
+                </div>
+            </div>
+
+            <div id="reportContent"></div>
+
+            <button class="primary-btn full" id="printReport">
+                Print / Save Report
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
